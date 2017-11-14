@@ -10,5 +10,5 @@
 1.`es6`常见语法.js<br>
 1.`es6`常见语法.js<br>
 * 编程语言  
-    * 脚本语言  
-        * Python
+    * ECMAScript 6  
+        * `es6`常见语法.js
