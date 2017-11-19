@@ -4,6 +4,7 @@
 * javascript  
     * ECMAScript 6  
         * 1.`es6`常见语法
+          * let和const;箭头函数;模板字符串;解构赋值;参数默认值,不定参数,拓展参数
         * 2.字符串API
         * 3.数值API
         * 4.对象
