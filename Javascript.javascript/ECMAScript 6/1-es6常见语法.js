@@ -72,13 +72,8 @@ let { name , sex } = info;
 	console.log(esTitle,cnTitle )
 }
 
-五 default 函数参数的默认值
-es6写法
-formarte ( str , size = 3 , sime = ',' ) {
 
-}
-
-六 参数默认值,不定参数,拓展参数
+五 参数默认值,不定参数,拓展参数
 1.默认参数
 运用ES6的默认参数
 function sayHello(name = 'xiaoming '){
