@@ -52,3 +52,44 @@ function removeClass (ele,cls){
         ele.className = ele.className.replace(reg,'');
     }
 }
+
+Cookie
+1.getCookie
+/**
+ * @desc 根据name读取cookie
+ * @param {String} name
+ * @return {string}
+ */
+function getCookie (name){
+    var arr = document.cookie.replace(/\s/g, "").split(';');
+    for(var i = 0; i < arr.length; i++){
+        var temArr = arr[i].split('=');
+        if(temArr[0] == name){
+            return decodeURIComponent(temArr[1]);
+        }
+    }
+    return '';
+}
+2.removeCookie
+var setCookie = require('./setCookie');
+/**
+ * 
+ * @desc 根据name删除cookie
+ * @param  {String} name 
+ */
+function removeCookie(name) {
+    // 设置已过期，系统会立刻删除cookie
+    setCookie(name, '1', -1);
+}
+3.setCookie
+/**
+ * @desc 设置cookie
+ * @param {String} name
+ * @param {String} value
+ * @param {Number} days
+ */
+function setCookie(name,value,days){
+    var date = new Date();
+    data.setDate(date.getDate() + days);
+    document.cookie = name + '=' + value + ';expires=' + date;
+}
