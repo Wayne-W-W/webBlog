@@ -146,3 +146,68 @@ function getOs(){
 function getScrollTop(){
     return ( document.documentElement && document.documentElement.scrollTo ) || document.body.scrollTop;
 }
+5.2 offset
+/**
+ * @desc 获取一个元素的距离文档(document)的位置，类似jq中的offset()
+ * @param {HTMLElement} ele
+ * @returns { { left : number , top : number} }
+ */
+function offset(ele){
+    var pos = {
+        left : 0,
+        top : 0 
+    }
+    while (ele) {
+        pos.left += els.offsetLeft;
+        pos.top += els.offsetTop;
+        ele = ele.offsetParent;
+    }
+    return pos;
+}
+5.3 scrollTo
+var getScrollTop = require('./getScrollTop');
+var setScrollTop = require('./setScrollTop');
+var requestAnimFrame = (function () {
+    return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
+})();
+/**
+ * @desc 在${duration} 时间内，滚动条平滑滚动到${to} 指定位置
+ * @param {Number} to
+ * @param {Number} duration
+ */
+function scrollTo(to, duration) {
+    if (duration < 0) {
+        setScrollTop(to);
+        return
+    }
+    var diff = to - getScrollTop();
+    if (diff === 0) return
+    var step = diff / duration * 10;
+    requestAnimationFrame(
+        function () {
+            if (Math.abs(step) > Math.abs(diff)) {
+                setScrollTop(getScrollTop() + diff);
+                return;
+            }
+            setScrollTop(getScrollTop() + step);
+            if (diff > 0 && getScrollTop() >= to || diff < 0 && getScrollTop() <= to) {
+                return;
+            }
+            scrollTo(to, duration - 16);
+        });
+}
+
+5.4 setScrollTop
+/**
+ * 
+ * @desc 设置滚动条距顶部的距离
+ */
+function setScrollTo(value){
+    window.screenTop(0,value)
+    return value;
+}
