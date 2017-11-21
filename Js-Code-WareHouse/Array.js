@@ -211,3 +211,42 @@ function setScrollTo(value){
     window.screenTop(0,value)
     return value;
 }
+
+六 Keycode
+6.1 getKeyName
+var keyCodeMap = {
+    8: 'Backspace',
+    9: 'Tab',
+    13: 'Enter',
+    16: 'Shift',
+    17: 'Ctrl',
+    18: 'Alt',
+    19: 'Pause',
+    20: 'Caps Lock',
+    27: 'Escape',
+    32: 'Space',
+    33: 'Page Up',
+    34: 'Page Down',
+    35: 'End',
+    36: 'Home',
+    37: 'Left',
+    38: 'Up',
+    39: 'Right',
+    40: 'Down',
+    42: 'Print Screen',
+    45: 'Insert',
+    46: 'Delete',
+};
+/**
+ * @desc 根据keycode获得键名
+ * @param {Number} keycode
+ * @return {String}
+ */
+function getKeyName(keycode){
+    if (keyCodeMap[keycode]) {
+        return keyCodeMap[keycode];
+    } else {
+        console.log('Unknow Key(Key Code:' + keycode + ')');
+        return '';
+    }
+}
