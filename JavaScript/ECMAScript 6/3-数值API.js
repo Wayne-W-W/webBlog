@@ -27,3 +27,13 @@ Math.trunc(-1.1)//-1
 Math.trunc(-0.1)//-0
 Math.trunc('123.456')//123
 Math.trunc('小明')//NaN
+
+
+
+/**
+ * @desc  整数转换 Number.paerseInt(xxx) 和 浮点型转换 Number.parseFloat(xxx)
+ * 
+ */
+let a='9.18';
+console.log(Number.parseInt(a)); 
+console.log(Number.parseFloat(a));
