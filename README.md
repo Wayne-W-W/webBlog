@@ -11,3 +11,4 @@
         * 5.数组
         * 6.深入理解ES6的模块
         * 7.class类-增强对象字面量
+  [前端自动化部署发布项目-PM2](https://github.com/WangBeijing/web-learning-notes/issues/1)
