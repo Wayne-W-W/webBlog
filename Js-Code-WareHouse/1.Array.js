@@ -1,7 +1,7 @@
 /**
  * @desc 判断两个数组是否相等
- * @param {Array} arr1 
- * @param {Array} arr2 
+ * @param {Array} arr1
+ * @param {Array} arr2
  * @return {Boolean}
  */
 function arrayEqual(arr1,arr2){
@@ -13,10 +13,11 @@ function arrayEqual(arr1,arr2){
     return false;
 }
 
+
 Class
 1.addClass
 /**
- * 
+ *
  * @desc 为元素添加class
  * @param {HTMLElement ele}
  * @param {String} cls
@@ -73,9 +74,9 @@ function getCookie (name){
 2.removeCookie
 var setCookie = require('./setCookie');
 /**
- * 
+ *
  * @desc 根据name删除cookie
- * @param  {String} name 
+ * @param  {String} name
  */
 function removeCookie(name) {
     // 设置已过期，系统会立刻删除cookie
@@ -155,7 +156,7 @@ function getScrollTop(){
 function offset(ele){
     var pos = {
         left : 0,
-        top : 0 
+        top : 0
     }
     while (ele) {
         pos.left += els.offsetLeft;
@@ -204,7 +205,7 @@ function scrollTo(to, duration) {
 
 5.4 setScrollTop
 /**
- * 
+ *
  * @desc 设置滚动条距顶部的距离
  */
 function setScrollTo(value){
