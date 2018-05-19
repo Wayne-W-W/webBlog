@@ -13,3 +13,45 @@ async function filter(){
     }
 }
 ```
+
+### 生成器
+
+###### 1.迭代器
+```
+function makeIterator (arr) {
+    let nextIndex = 0;
+    //返回一个迭代器
+    return {
+        next:() => {
+            //next()方法返回的结果对象
+            if(nextIndex < arr.length) {
+                return { value: arr[nextIndex++], done: false}
+            }else{
+                return {done: true}
+            }
+        }
+    }
+}
+const it = makeIterator(['吃饭','睡觉','打豆豆'])
+
+console.log('首先',it.next().value)  //吃饭
+console.log('首先',it.next().value)  //睡觉
+console.log('首先',it.next().value)  //打豆豆
+console.log('首先',it.next().done)   //true
+```
+> return返回一个next方法
+
+######  2.生成器:生成一个返回迭代器的函数，本质上操作迭代器，实际是借助生成器函数进行操作。
+```
+function *makeIterator (arr) {
+    for (let i = 0; i < arr.length; i++){
+        yield arr[i] 
+    }
+}
+const gen = makeIterator(['吃饭','睡觉','打豆豆']);
+console.log('首先',gen.next().value)//吃饭
+console.log('首先',gen.next().value)//睡觉
+console.log('首先',gen.next().value)//打豆豆
+console.log('首先',gen.next().done)//true
+```
+> 生成器的出现简化了创建生成器这个繁琐的过程，更方便我们使用迭代器。
