@@ -55,3 +55,17 @@ console.log('首先',gen.next().value)//打豆豆
 console.log('首先',gen.next().done)//true
 ```
 > 生成器的出现简化了创建生成器这个繁琐的过程，更方便我们使用迭代器。
+
+### co
+
+```
+const co = require('co');
+const fetch = require('node-fetch');
+co(function *() {
+    const res = yield fetch ('https://api.douban.com/v2/movie/1291843');
+    const movie = yield res.json();
+    const summary = movie.summary
+    console.log(summary)
+}
+```
+> 将传入generator function转为promise;yield只能用于对象、数组、promise(包括generator),不能yield字符串、数组。
