@@ -2,6 +2,7 @@
 # 博客目录
 
 ### 2018
+#### [前端工程师探索麦肯锡高效工作秘诀](https://www.jianshu.com/p/d73f8100587a)
 #### [2018VueConf杭州-脑图](https://github.com/WangBeijing/webBlog/issues/11)
 #### [升级Webpack4尝鲜，究竟有多快](https://github.com/WangBeijing/webBlog/issues/10)
 #### [Docker环境下前后端项目部署](https://github.com/WangBeijing/webBlog/issues/8)
