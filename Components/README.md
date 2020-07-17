@@ -1,8 +1,8 @@
-### Ks-form组件 && Ks-input组件
+### form组件 && input组件
 
 #### 用法
 ```html
-<ks-form ref="ksForm">
+<ks-form ref="Form">
   <ks-input  
     v-model="form.phoneNum"
     :required="true"
@@ -14,8 +14,8 @@
 </ks-form>
 ```
 ```js
-import ksInput from '@/components/common-compts/ks-input.vue'
-import ksForm from '@/components/common-compts/ks-form.vue'
+import ksInput from '@/components/common-compts/input.vue'
+import ksForm from '@/components/common-compts/form.vue'
 
 components: {
   ksInput,
@@ -57,21 +57,21 @@ methods: {
 
 #### 用法
 ```html
-<ks-select
+<select
   v-model="form.appellate"
   :required="true"
   :message="'请输入选择称谓'"
   :placeholder="'请选择'"
 >
-  <ks-option :label="'先生'" :value="'0'"></ks-option>
-  <ks-option :label="'女士'" :value="'1'"></ks-option>
-</ks-select>
+  <option :label="'先生'" :value="'0'"></option>
+  <option :label="'女士'" :value="'1'"></option>
+</select>
 ```
 ```js
-import ksInput from '@/components/common-compts/ks-input.vue'
+import Input from '@/components/common-compts/input.vue'
 
 components: {
-  ksInput,
+ Input,
 },
 ```
 ### Props 配置
