@@ -20,4 +20,4 @@
 #### [前端性能优化](https://github.com/WangBeijing/web-learning-notes/issues/4)
 #### [Vue实战过程中的注意问题](https://github.com/WangBeijing/web-learning-notes/issues/5)
  
-https://github.com/WangBeijing/webBlog/blob/master/Blog/2018/201803/2.%E5%9B%A2%E9%98%9FCSS%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A.md
+[团队CSS命名约定](https://github.com/WangBeijing/webBlog/blob/master/Blog/2018/201803/2.%E5%9B%A2%E9%98%9FCSS%E5%91%BD%E5%90%8D%E7%BA%A6%E5%AE%9A.md)
